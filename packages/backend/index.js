@@ -72,7 +72,7 @@ const parameterPromise =  ssm.getParameter({
   WithDecryption: true
 }).promise()
 
-console.log(parameterPromise['Parameter'])
+console.log(parameterPromise)
 const mongoString = parameterPromise['Parameter']['Value']
 
 // LISTEN TO APP
