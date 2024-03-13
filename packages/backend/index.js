@@ -6,6 +6,8 @@ import listEndpoints from "express-list-endpoints";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import assetsRouter from "./services/assets/index.js";
+// import { secret } from '@aws-amplify/backend';
+import { secret } from '@aws-amplify';
 // import gameAssetsRouter from "./services/assets/game-assets/index.js";
 import { 
   catchAllErrorHandler, 
@@ -67,7 +69,7 @@ console.table(listEndpoints(app));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
   try {
-    await mongoose.connect(process.env.secrets.MONGO_URI);
+    await mongoose.connect(secret('MONGO_URI'));
     console.log(`✅ Server is running on ${PORT} and connected to MongoDB`);
   } catch (error) {
     console.log("Db connection is failed ", error);
