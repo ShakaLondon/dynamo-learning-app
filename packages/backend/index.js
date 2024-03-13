@@ -67,11 +67,12 @@ console.table(listEndpoints(app));
 
 const ssm = new aws.SSM({region: 'us-east-1'});
 
-const parameterPromise =  await ssm.getParameter({
+const parameterPromise =  ssm.getParameter({
   Name: '/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI',
   WithDecryption: true
-})
-console.log(parameterPromise)
+}).promise()
+
+console.log(parameterPromise['Parameter'])
 const mongoString = parameterPromise['Parameter']['Value']
 
 // LISTEN TO APP
