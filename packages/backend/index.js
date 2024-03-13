@@ -71,7 +71,7 @@ const parameterPromise =  await ssm.getParameter({
   Name: '/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI',
   WithDecryption: true
 })
-
+console.log(parameterPromise)
 const mongoString = parameterPromise['Parameter']['Value']
 
 // LISTEN TO APP
