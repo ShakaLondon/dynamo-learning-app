@@ -67,7 +67,7 @@ console.table(listEndpoints(app));
 
 const ssm = new aws.SSM({region: 'us-east-1'});
 
-const parameterPromise =  ssm.getParameter({
+const parameterPromise =  await ssm.getParameter({
   Name: '/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI',
   WithDecryption: true
 }).promise()
