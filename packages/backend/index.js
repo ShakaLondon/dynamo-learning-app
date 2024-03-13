@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import assetsRouter from "./services/assets/index.js";
 // import { secret } from '@aws-amplify/backend';
-import { secret } from '@aws-amplify';
+import { secret } from 'aws-amplify';
 // import gameAssetsRouter from "./services/assets/game-assets/index.js";
 import { 
   catchAllErrorHandler, 
