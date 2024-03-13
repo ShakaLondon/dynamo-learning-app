@@ -67,7 +67,7 @@ console.table(listEndpoints(app));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.secrets.MONGO_URI);
     console.log(`✅ Server is running on ${PORT} and connected to MongoDB`);
   } catch (error) {
     console.log("Db connection is failed ", error);
