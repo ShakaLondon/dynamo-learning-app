@@ -72,7 +72,7 @@ const parameterPromise =  await ssm.getParameter({
   WithDecryption: true
 })
 
-const mongoString = JSON.parse(parameterPromise)
+const mongoString = parameterPromise['Parameter']['Value']
 
 // LISTEN TO APP
 const PORT = process.env.PORT || 3000;
