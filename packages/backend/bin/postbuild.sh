@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo yum -y install jq
-
 rm -rf ./.amplify-hosting
 
 # mkdir -p ./.amplify-hosting/compute
