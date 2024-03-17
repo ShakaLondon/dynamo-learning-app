@@ -13,4 +13,5 @@ cp -r public ./.amplify-hosting/static
 
 cp deploy-manifest.json ./.amplify-hosting/deploy-manifest.json
 
-export MONGO_URI=$(aws ssm get-parameter --name "/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI" --with-decryption | jq ".Parameter.Value")
+# export MONGO_URI=$(aws ssm get-parameter --name "/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI" --with-decryption | jq ".Parameter.Value")
+echo "MONGO_URI=$(aws ssm get-parameter --name '/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI' --with-decryption | jq '.Parameter.Value')" >> ./.amplify-hosting/.env
