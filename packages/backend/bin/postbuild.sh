@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo yum install jq
+sudo yum -y install jq
 
 rm -rf ./.amplify-hosting
 
