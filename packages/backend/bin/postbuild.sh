@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt-get update
+sudo apt-get install jq
+
 rm -rf ./.amplify-hosting
 
 # mkdir -p ./.amplify-hosting/compute
@@ -13,4 +16,4 @@ cp -r public ./.amplify-hosting/static
 
 cp deploy-manifest.json ./.amplify-hosting/deploy-manifest.json
 
-# export MONGO_URI=$(aws ssm get-parameter --name "/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI" --with-decryption --query "Parameter.Value" --output text)
+export MONGO_URI=$(aws ssm get-parameter --name "/amplify/dxrmrwkfi1p5r/dynamo-learning-app-backend/MONGO_URI" --with-decryption --query "Parameter.Value" --output text)
