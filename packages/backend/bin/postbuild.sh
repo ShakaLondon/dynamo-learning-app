@@ -5,7 +5,6 @@ rm -rf ./.amplify-hosting
 # mkdir -p ./.amplify-hosting/compute
 mkdir -p ./.amplify-hosting/compute/default
 
-cp -r ./src/index.js ./.amplify-hosting/compute/default/src/index.js
 cp -r ./src ./.amplify-hosting/compute/default/src
 cp -r ./node_modules ./.amplify-hosting/compute/default/node_modules
 
