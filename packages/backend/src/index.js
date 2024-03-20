@@ -5,16 +5,16 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 import listEndpoints from "express-list-endpoints";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
-import assetsRouter from "./services/assets/index.js";
+import assetsRouter from "./assets/index.js";
 // import gameAssetsRouter from "./services/assets/game-assets/index.js";
 import { 
   catchAllErrorHandler, 
   entryForbiddenMiddleware, 
-  notFoundMiddleware } from "./services/utils/errorhandler.js";
-import userRouter from "./services/users/index.js";
-import tokenRouter from "./services/token/index.js";
-import gamesRouter from "./services/games/index.js";
-import userGamesRouter from "./services/user-games/index.js";
+  notFoundMiddleware } from "./utils/errorhandler.js";
+import userRouter from "./users/index.js";
+import tokenRouter from "./token/index.js";
+import gamesRouter from "./games/index.js";
+import userGamesRouter from "./user-games/index.js";
 dotenv.config()
 
 

@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import UserModel from "../../services/users/schema.js";
+import UserModel from "../users/schema.js";
 // import BusinessUserModel from "../../services/business-users/schema.js";
 // import createError from "http-errors";
 
