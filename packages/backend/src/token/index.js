@@ -1,5 +1,5 @@
 import express from "express";
-import RefreshModel from "../token/schema.js";
+import RefreshModel from "./schema.js";
 import { JwtMiddleware, generateJwt } from "../utils/jwt.js";
 
 const tokenRouter = express.Router();
