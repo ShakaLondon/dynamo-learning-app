@@ -33,7 +33,7 @@
         }
       },
       {
-        "path": "/*",
+        "path": "/src/*",
         "target": {
           "kind": "Compute",
           "src": "default"
